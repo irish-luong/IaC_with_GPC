@@ -42,7 +42,7 @@ generate_model() {
       echo "[ERROR] Model $1 exist.";
     else
       mkdir "$WORKING_DIR/models/$1";
-      model_files=( "main.tf" "provider.tf" )
+      model_files=( "main.tf" "provider.tf" "version.tf")
       for i in "${model_files[@]}"
       do
         touch "$WORKING_DIR/models/$1/$i"
